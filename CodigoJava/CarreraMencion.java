@@ -10,7 +10,8 @@ public class CarreraMencion extends Carrera{
     public CarreraMencion() {
     }
 
-    public CarreraMencion(Stack<String> menciones) {
+    public CarreraMencion(String nombre, int planEstudios, int idCarrera, Stack<String> menciones) {
+        super(nombre, planEstudios, idCarrera);
         this.menciones = menciones;
     }
     

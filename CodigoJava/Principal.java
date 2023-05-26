@@ -6,27 +6,40 @@ public class Principal {
 
 	public static void main(String[] args) throws FileNotFoundException, IOException, ClassNotFoundException
 	{
+		//CARRERAS NORMALES (SIN MENCIONES)
+		CCCarreras c1=new CCCarreras();
+		c1.adicionar(new Carrera("ElECTRICIDAD INDUSTRIAL", 0, 1)); 
+		c1.adicionar(new Carrera("ElECTRONICA", 0, 2)); 
+
+		CCCarreras c2=new CCCarreras();
+		c2.adicionar(new Carrera("MECANICA", 0, 3)); 
+		c2.adicionar(new Carrera("MECANICA", 0, 4)); 
+
+		CCCarreras c3=new CCCarreras();
+		c3.adicionar(new Carrera("ARTES", 0, 5)); 
+		c3.adicionar(new Carrera("FORESTAL", 0, 6)); 
+
+		CCCarreras c4=new CCCarreras();
+		c4.adicionar(new Carrera("AGROPECUARIA", 0, 7)); 
+		c4.adicionar(new Carrera("ElECTRICIDAD", 0, 8)); 
+
+		CCCarreras c5=new CCCarreras();
+		c5.adicionar(new Carrera("MECANICA", 0, 9)); 
+		c5.adicionar(new Carrera("SECRETARIO", 0, 10)); 
 
 
-
-		
+		//CARRERAS CON MENCIONES
+		CCCarreras cm1=new CCCarreras();
+		cm1.adicionar(new CarreraMencion(null));
 		//INSTITUTOS
 		LDobleInstituto LDI=new LDobleInstituto();
 		LDobleUniversidad LDU=new LDobleUniversidad();
-		LDI.adicionar(new Instituto("ESCUELA INDUSTRIAL SUPERIOR PEDRO DOMINGO MURILLO", "La Paz", "Murillo", "La Paz", "", "", "FISCAL", "R.M. N° 498/2010", 0, 1942, null));
-		LDI.adicionar(new Instituto("INSTITUTO TECNOLOGICO PUERTO DE MEJILLONES", "La Paz", "Murillo", "El Alto", "", "", "FISCAL", "R.M. N° 814/09", 0, 1981, null));
-		LDI.adicionar(new Instituto("INSTITUTO TECNOLOGICO DON BOSCO", "La Paz", "Murillo", "", "El Alto", "", "CONVENIO", "R.M. N° 029/11", 0, 1998, null));
-		LDI.adicionar(new Instituto("INSTITUTO SUPERIOR TECNOLOGICO AGROINDUSTRIAL CANAVIRI (ISTAIC)", "La Paz", "Caranavi", "Caranavi", "", "", "FISCAL", "R.M. N° 204/10", 0, 1989, null));
-		LDI.adicionar(new Instituto("INSITTUTO TECNICO COMERCIAL LA PAZ", "La Paz", "Murillo", "La Paz", "", "", "FISCAL", "R.M. N° 066/2012", 0, 1977, null));
-		LDI.adicionar(new Instituto("CENTRO DE FORMACION PROFESIONAL BRASIL-BOLIVIA", "La Paz", "Murillo", "El Alto", "", "", "FISCAL", "R.M. N° 486/10", 0, 2009, null));
-		LDI.adicionar(new Instituto("INSTITUTO TECNOLOGICO AYACUCHO", "La Paz", "", "Murillo", "La Paz", "", "FISCAL", "R.M. N° 298/2011", 0, 1981, null));
-		LDI.adicionar(new Instituto("INSTITUTO COMERCIAL SUPERIOR DE LA NACION INCOS", "La Paz", "Murillo", "El Alto", "", "", "FISCAL", "R.M. N° 297/11", 0, 2001, null));
-		LDI.adicionar(new Instituto("INSTITUTO TECNICO PRODUCTIVO ALTERNATIVO BOLIVIA MAR", "La Paz", "Murillo", "La Paz", "", "", "FISCAL", "R.M. N° 773/13", 0, 2009, null));
-		LDI.adicionar(new Instituto("INSTITUTO COMERCIAL SUPERIOR DE LA NACION Tte Armando de Palacios", "La Paz", "La Paz", "", "", "", "FISCAL", "R.M. N° 841/2013", 0, 1944, null));
-		LDI.adicionar(new Instituto("INSTITUTO SUPERIOR DE EDUCACION COMERCIAL AMERICANO", "La Paz", "Murillo", "La Paz", "", "", "CONVENIO", "R.M. N° 369/2013", 0, 1994, null));
-		LDI.adicionar(new Instituto("INSTITUTO TECNOLOGICO MARCELO QUIROGA SANTACRUZ", "La Paz", "Murillo", "", "La Paz", "", "FISCAL", "R.M. N° 039/2013", 0, 1986, null));
-		LDI.adicionar(new Instituto("INSTITUTO SUPERIOR DE ELECTRONICA INFORMATICA Y TELECOMUNICACIONES SANTO TORIBIO DE MOGROVEJO", "La Paz", "Murillo", "El Alto", "", "", "", "R.M. N° 308/12", 0, 1999, null));
-		LDI.adicionar(new Instituto("INSTITUTO TECNOLOGICO JACHA OMASUYOS", "La Paz", "Omasuyos", "", "", "", "FISCAL", "R.M. N° 486/12", 0, 2012, null));
+		LDI.adicionar(new Instituto("ESCUELA INDUSTRIAL SUPERIOR PEDRO DOMINGO MURILLO", "La Paz", "Murillo", "La Paz", "", "", "FISCAL", "R.M. N° 498/2010", 0, 1942, c1));
+		LDI.adicionar(new Instituto("INSTITUTO TECNOLOGICO PUERTO DE MEJILLONES", "La Paz", "Murillo", "El Alto", "", "", "FISCAL", "R.M. N° 814/09", 0, 1981, c2));
+		LDI.adicionar(new Instituto("INSTITUTO TECNOLOGICO DON BOSCO", "La Paz", "Murillo", "", "El Alto", "", "CONVENIO", "R.M. N° 029/11", 0, 1998, c3));
+		LDI.adicionar(new Instituto("INSTITUTO SUPERIOR TECNOLOGICO AGROINDUSTRIAL CANAVIRI (ISTAIC)", "La Paz", "Caranavi", "Caranavi", "", "", "FISCAL", "R.M. N° 204/10", 0, 1989, c4));
+		LDI.adicionar(new Instituto("INSITTUTO TECNICO COMERCIAL LA PAZ", "La Paz", "Murillo", "La Paz", "", "", "FISCAL", "R.M. N° 066/2012", 0, 1977, c5));
+		
 
 
 		int op=0;
