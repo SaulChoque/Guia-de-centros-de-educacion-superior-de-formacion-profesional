@@ -42,9 +42,12 @@ public class LDobleInstituto {
     
     public void mostrar()
     {
+        int i=1;
         NodoInstituto o=getP();
         while(o!=null)
-        {
+        {    
+            System.out.println(i+")---------\n");
+            i++;
             o.getInstituto().mostrar();
             o=o.getSig();
         }

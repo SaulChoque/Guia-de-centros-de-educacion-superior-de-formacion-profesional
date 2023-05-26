@@ -30,9 +30,12 @@ public class LDobleUniversidad {
     }
     public void mostrar()
     {
+        int i=1;
         NodoUni o=getP();
         while(o!=null)
         {
+            System.out.println(i+")---------\n");
+            i++;
             o.getUniversidad().mostrar();
             o=o.getSig();
         }

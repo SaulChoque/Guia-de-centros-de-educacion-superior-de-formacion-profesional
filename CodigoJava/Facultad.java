@@ -9,6 +9,7 @@ public class Facultad {
 
 
     public Facultad() {
+        carreras=new LinkedList<Integer>();
     }
     
     public Facultad(String nombre, Queue<Integer> carreras) {
@@ -32,9 +33,11 @@ public class Facultad {
     
     public void mostrarCarreras(CCCarreras a){
         Iterator<Integer> r=carreras.iterator();
+        int i=1;
         while(r.hasNext()){
             int cx=r.next();
-            System.out.println(buscarCarreraID(a, cx));
+            System.out.println("\t"+i+")\t"+buscarCarreraID(a, cx));
+            i++;
         }
     }
 

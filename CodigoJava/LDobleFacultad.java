@@ -29,10 +29,12 @@ public class LDobleFacultad {
     }
     public void mostrar(CCCarreras a)
     {
+        int i=1;
         NodoFacultad o=getP();
         while(o!=null)
         {
-            System.out.println(o.getFacultad());
+            i++;
+            System.out.println(i+")\t"+o.getFacultad());
             System.out.println("- Carreras: ");
             o.getFacultad().mostrarCarreras(a);
             o=o.getSig();

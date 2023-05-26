@@ -8,6 +8,7 @@ public class CarreraMencion extends Carrera{
 
 
     public CarreraMencion() {
+        menciones=new Stack<String>();
     }
 
     public CarreraMencion(String nombre, int planEstudios, int idCarrera, Stack<String> menciones) {

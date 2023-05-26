@@ -50,12 +50,14 @@ public class CCCarreras {
 		if (esvacia ())
 		    System.out.println ("Cola vacia xxx");
 		else{
+			int i=1;
 		    System.out.println ("\n Carreras de la Cola ");
 		    CCCarreras aux = new CCCarreras ();
 		    while (!esvacia ()){
 				Carrera elem = eliminar ();
 				aux.adicionar (elem);
-				System.out.println(elem);
+				System.out.println(i+")/t"+elem);
+				i++;
 		    }
 		    vaciar(aux);
 		}
