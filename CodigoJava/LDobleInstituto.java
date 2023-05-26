@@ -1,14 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package java;
+package CodigoJava;
 
-/**
- *
- * @author Carmen Huanca
- */
 public class LDobleInstituto {
     private NodoInstituto p;
     LDobleInstituto()
@@ -23,7 +14,7 @@ public class LDobleInstituto {
     public void setP(NodoInstituto p) {
         this.p = p;
     }
-    public void adiFinal(Instituto instituto){
+    public void adicionar(Instituto instituto){
         NodoInstituto nue=new NodoInstituto();
         nue.setInstituto(instituto);
     
@@ -37,6 +28,18 @@ public class LDobleInstituto {
             nue.setAnt(r);
         }
     }
+    public void leer(){
+		char condition=' ';
+		do {
+			Instituto ux=new Instituto();
+			ux.leer();
+			this.adicionar(ux);
+			System.out.println(">>>>>> Desea seguir añadiendo institutos? (s/n) => ");
+			String g =Leer.dato();
+			condition= g.charAt(0);
+		} while (condition=='s');
+	}  
+    
     public void mostrar()
     {
         NodoInstituto o=getP();

@@ -1,4 +1,4 @@
-package java;
+package CodigoJava;
 
 import java.util.*;
 
@@ -49,14 +49,40 @@ public class Facultad {
             a.adicionar(cx);
         }
         return rs;
+    }
+    /*
+     
+    public void leer(){
+        System.out.println("\n- Lectura Carrera: ");
+        System.out.print("\t>> Inserte nombre => ");
+        this.nombre=Leer.dato();
+        System.out.print("\t>> Inserte año plan de estudios => ");
+        this.planEstudios=Leer.datoInt();
+        System.out.print("\t>> Inserte idCarrera => ");
+        this.idCarrera=Leer.datoInt();
+    } 
+    */
+    public void leer(CCCarreras carreras){
+        System.out.println("\n- Lectura Facultad: ");
+        System.out.print("\t>> Inserte nombre => ");
+        this.nombre=Leer.dato();
+        char condition=' ';
+        System.out.println("-Adicion carreras (!!! recuerde que la carrera a añador tiene que\nhaber sido adicionada previamente en el apartado de lectura carreras !!!)");
+		do {
+            System.out.print("\t\t>> Inserte nombre de la carrera a adicionar => ");
+            String nomcarr=Leer.dato();
+            addCarrera(carreras, nomcarr);
+			System.out.println(">>>>>> Desea seguir a d i c i o n a n d o Carreras? (s/n) => ");
+			String g =Leer.dato();
+			condition= g.charAt(0);
+		} while (condition=='s');
+        
+        
     } 
 
     public String getNombre() {return this.nombre;}
-
     public void setNombre(String nombre) {this.nombre = nombre;}
-    
     public Queue<Integer> getCarreras() {return this.carreras;}
-    
     public void setCarreras(Queue<Integer> carreras) {this.carreras = carreras;}
     
     

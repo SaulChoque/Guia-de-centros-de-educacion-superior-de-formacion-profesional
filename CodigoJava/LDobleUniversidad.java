@@ -1,8 +1,8 @@
-package java;
+package CodigoJava;
 
-public class LDobleUni {
+public class LDobleUniversidad {
     private NodoUni p;
-    LDobleUni()
+    LDobleUniversidad()
     {
         p=null;
     }
@@ -14,7 +14,7 @@ public class LDobleUni {
     public void setP(NodoUni p) {
         this.p = p;
     }
-    public void adiFinal(Universidad universidad){
+    public void adicionar(Universidad universidad){
         NodoUni nue=new NodoUni();
         nue.setUniversidad(universidad);
         
@@ -37,5 +37,16 @@ public class LDobleUni {
             o=o.getSig();
         }
     }
+    public void leer(){
+		char condition=' ';
+		do {
+			Universidad ux=new Universidad();
+			ux.leer();
+			this.adicionar(ux);
+			System.out.println(">>>>>> Desea seguir añadiendo Universidades? (s/n) => ");
+			String g =Leer.dato();
+			condition= g.charAt(0);
+		} while (condition=='s');
+	}  
     
 }

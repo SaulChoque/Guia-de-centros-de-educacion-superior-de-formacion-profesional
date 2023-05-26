@@ -1,26 +1,29 @@
-package java;
+package CodigoJava;
 import java.util.Objects;
 
 public class Instituto extends InstitucionEducacion{
-    private String Tipo;
     private CCCarreras carreras;
 
 
     public Instituto() {
-        this.Tipo = "";
+        super();
         this.carreras = new CCCarreras();
     }
 
-    public Instituto(String Tipo, CCCarreras carreras) {
-        this.Tipo = Tipo;
+    public Instituto(String nombre, String departamento, String provincia, String municipio, String direccion, String correo, String dependencia, String documentoLegal, int telefono, int apertura, CCCarreras carreras) {
+        super(nombre, departamento, provincia, municipio, direccion, correo, dependencia, documentoLegal, telefono, apertura);
         this.carreras = carreras;
     }
 
-    public String getTipo() {return this.Tipo;}
-    public void setTipo(String Tipo) {this.Tipo = Tipo;}
     public CCCarreras getCarreras() {return this.carreras;}
     public void setCarreras(CCCarreras carreras) {this.carreras = carreras;}
 
+    public void leer(){
+        System.out.println("\n- Lectura Instituto: ");
+        super.leer();
+        //carreras sin menciones
+        carreras.leer();
+    } 
 
     public void mostrar(){
         System.out.println(super.toString()+" "+this.toString());
@@ -35,20 +38,15 @@ public class Instituto extends InstitucionEducacion{
             return false;
         }
         Instituto instituto = (Instituto) o;
-        return Objects.equals(Tipo, instituto.Tipo) && Objects.equals(carreras, instituto.carreras);
+        return Objects.equals(carreras, instituto.carreras);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(Tipo, carreras);
+        return Objects.hash(carreras);
     }
 
-    @Override
-    public String toString() {
-        return "{" +
-            " Tipo='" + getTipo() + "'" +
-            "}";
-    }
+    
     
     
 }

@@ -1,4 +1,4 @@
-package java;
+package CodigoJava;
 import java.util.Objects;
 
 public class Universidad extends InstitucionEducacion{
@@ -7,11 +7,13 @@ public class Universidad extends InstitucionEducacion{
     
 
     public Universidad() {
+        super();
         this.facultades = new LDobleFacultad();
         this.carreras = new CCCarreras();
     }
 
-    public Universidad(LDobleFacultad facultades, CCCarreras carreras) {
+    public Universidad(String nombre, String departamento, String provincia, String municipio, String direccion, String correo, String dependencia, String documentoLegal, int telefono, int apertura,LDobleFacultad facultades, CCCarreras carreras) {
+        super(nombre, departamento, provincia, municipio, direccion, correo, dependencia, documentoLegal, telefono, apertura);
         this.facultades = facultades;
         this.carreras = carreras;
     }
@@ -61,6 +63,21 @@ public class Universidad extends InstitucionEducacion{
             carreras.mostrar();
         }
     }
+
+
+    public void leer(){
+        System.out.println("- Lectura universidad: ");
+        super.leer();
+        //carreras con menciones
+        carreras.leer(true);
+        System.out.println(">>>>>> Desea añadir Facultades? (s/n) => ");
+        String g =Leer.dato();
+        char c = g.charAt(0);
+        if(c=='s'){
+            facultades.leer(carreras);
+        }
+        
+    } 
 
     
 }

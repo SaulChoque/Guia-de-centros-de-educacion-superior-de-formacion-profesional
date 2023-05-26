@@ -1,4 +1,4 @@
-package java;
+package CodigoJava;
 
 public class LDobleFacultad {
     private NodoFacultad p;
@@ -14,7 +14,7 @@ public class LDobleFacultad {
     public void setP(NodoFacultad p) {
         this.p = p;
     }
-    public void adiFinal(Facultad facultad){
+    public void adicionar(Facultad facultad){
         NodoFacultad nue=new NodoFacultad();
         nue.setFacultad(facultad);        
         if(getP()==null)
@@ -38,5 +38,17 @@ public class LDobleFacultad {
             o=o.getSig();
         }
     }
+
+    public void leer(CCCarreras carreras){
+		char condition=' ';
+		do {
+			Facultad fx=new Facultad();
+			fx.leer(carreras);
+			this.adicionar(fx);
+			System.out.println(">>>>>> Desea seguir añadiendo Facultades? (s/n) => ");
+			String g =Leer.dato();
+			condition= g.charAt(0);
+		} while (condition=='s');
+	}  
     
 }

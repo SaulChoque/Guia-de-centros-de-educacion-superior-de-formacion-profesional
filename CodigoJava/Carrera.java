@@ -1,4 +1,4 @@
-package java;
+package CodigoJava;
 import java.util.Objects;
 
 public class Carrera {
@@ -17,44 +17,23 @@ public class Carrera {
         this.idCarrera = idCarrera;
     }
 
-    public String getNombre() {
-        return this.nombre;
-    }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
+    public void leer(){
+        System.out.println("\n- Lectura Carrera: ");
+        System.out.print("\t>> Inserte nombre => ");
+        this.nombre=Leer.dato();
+        System.out.print("\t>> Inserte año plan de estudios => ");
+        this.planEstudios=Leer.datoInt();
+        System.out.print("\t>> Inserte idCarrera => ");
+        this.idCarrera=Leer.datoInt();
+    } 
 
-    public int getPlanEstudios() {
-        return this.planEstudios;
-    }
-
-    public void setPlanEstudios(int planEstudios) {
-        this.planEstudios = planEstudios;
-    }
-
-    public int getIdCarrera() {
-        return this.idCarrera;
-    }
-
-    public void setIdCarrera(int idCarrera) {
-        this.idCarrera = idCarrera;
-    }
-
-    public Carrera nombre(String nombre) {
-        setNombre(nombre);
-        return this;
-    }
-
-    public Carrera planEstudios(int planEstudios) {
-        setPlanEstudios(planEstudios);
-        return this;
-    }
-
-    public Carrera idCarrera(int idCarrera) {
-        setIdCarrera(idCarrera);
-        return this;
-    }
+    public String getNombre() {return this.nombre;}
+    public void setNombre(String nombre) {this.nombre = nombre;}
+    public int getPlanEstudios() {return this.planEstudios;}
+    public void setPlanEstudios(int planEstudios) {this.planEstudios = planEstudios;}
+    public int getIdCarrera() {return this.idCarrera;}
+    public void setIdCarrera(int idCarrera) {this.idCarrera = idCarrera;}
 
     @Override
     public boolean equals(Object o) {

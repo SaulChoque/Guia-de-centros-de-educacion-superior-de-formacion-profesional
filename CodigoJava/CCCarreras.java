@@ -1,4 +1,4 @@
-package java;
+package CodigoJava;
 public class CCCarreras {
     private int max=100;
     private Carrera v[]=new Carrera[max+1];
@@ -60,6 +60,29 @@ public class CCCarreras {
 		    vaciar(aux);
 		}
     }
+
+	public void leer(){
+		char condition=' ';
+		do {
+			Carrera cx=new Carrera();
+			cx.leer();
+			this.adicionar(cx);
+			System.out.println(">>>>>> Desea seguir añadiendo Carreras? (s/n) => ");
+			String g =Leer.dato();
+			condition= g.charAt(0);
+		} while (condition=='s');
+	}  
+	public void leer(boolean a){
+		char condition=' ';
+		do {
+			CarreraMencion cx=new CarreraMencion();
+			cx.leer();
+			this.adicionar(cx);
+			System.out.println(">>>>>> Desea seguir añadiendo Carreras? (s/n) => ");
+			String g =Leer.dato();
+			condition= g.charAt(0);
+		} while (condition=='s');
+	}  
 
     public void vaciar (CCCarreras a){
 		while (!a.esvacia ())

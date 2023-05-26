@@ -1,4 +1,4 @@
-package java;
+package CodigoJava;
 /*Programa Leer,para datos de tipo Short,Int,Float,Double,Long*/
 import java.io.*;
 public class Leer
@@ -48,6 +48,8 @@ public class Leer
       { return Long.MIN_VALUE;
       }
     }
+
+
     
     public static float datoFloat()
     { try

@@ -1,0 +1,35 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Principal",
+            "request": "launch",
+            "mainClass": "CodigoJava.Principal",
+            "projectName": "Guia-de-centros-de-educacion-superior-de-formacion-profesional_b99526f3"
+        },
+        {
+            "type": "java",
+            "name": "Principal",
+            "request": "launch",
+            "mainClass": "java.Principal",
+            "projectName": "Guia-de-centros-de-educacion-superior-de-formacion-profesional_b99526f3"
+        },
+        {
+            "name": ".NET Core Launch (console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/c#/bin/Debug/net7.0/c#.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/c#",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach"
+        }
+    ]
+}

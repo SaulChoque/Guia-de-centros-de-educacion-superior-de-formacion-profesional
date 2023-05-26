@@ -1,4 +1,4 @@
-package java;
+package CodigoJava;
 import java.util.Objects;
 
 public class NodoUni {
