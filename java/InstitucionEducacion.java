@@ -2,15 +2,15 @@ package java;
 import java.util.Objects;
 
 public class InstitucionEducacion {
-    private String nombre,departamento,provincia,municipio,direccion,correo,dependencia;
-    private int telefono,apertura;
+    protected String nombre,departamento,provincia,municipio,direccion,correo,dependencia,documentoLegal;
+    protected int telefono,apertura;
     //documentoLegal
 
 
     public InstitucionEducacion() {
     }
 
-    public InstitucionEducacion(String nombre, String departamento, String provincia, String municipio, String direccion, String correo, String dependencia, int telefono, int apertura) {
+    public InstitucionEducacion(String nombre, String departamento, String provincia, String municipio, String direccion, String correo, String dependencia, String documentoLegal, int telefono, int apertura) {
         this.nombre = nombre;
         this.departamento = departamento;
         this.provincia = provincia;
@@ -18,6 +18,7 @@ public class InstitucionEducacion {
         this.direccion = direccion;
         this.correo = correo;
         this.dependencia = dependencia;
+        this.documentoLegal = documentoLegal;
         this.telefono = telefono;
         this.apertura = apertura;
     }
@@ -78,6 +79,14 @@ public class InstitucionEducacion {
         this.dependencia = dependencia;
     }
 
+    public String getDocumentoLegal() {
+        return this.documentoLegal;
+    }
+
+    public void setDocumentoLegal(String documentoLegal) {
+        this.documentoLegal = documentoLegal;
+    }
+
     public int getTelefono() {
         return this.telefono;
     }
@@ -129,6 +138,11 @@ public class InstitucionEducacion {
         return this;
     }
 
+    public InstitucionEducacion documentoLegal(String documentoLegal) {
+        setDocumentoLegal(documentoLegal);
+        return this;
+    }
+
     public InstitucionEducacion telefono(int telefono) {
         setTelefono(telefono);
         return this;
@@ -147,13 +161,9 @@ public class InstitucionEducacion {
             return false;
         }
         InstitucionEducacion institucionEducacion = (InstitucionEducacion) o;
-        return Objects.equals(nombre, institucionEducacion.nombre) && Objects.equals(departamento, institucionEducacion.departamento) && Objects.equals(provincia, institucionEducacion.provincia) && Objects.equals(municipio, institucionEducacion.municipio) && Objects.equals(direccion, institucionEducacion.direccion) && Objects.equals(correo, institucionEducacion.correo) && Objects.equals(dependencia, institucionEducacion.dependencia) && telefono == institucionEducacion.telefono && apertura == institucionEducacion.apertura;
+        return Objects.equals(nombre, institucionEducacion.nombre) && Objects.equals(departamento, institucionEducacion.departamento) && Objects.equals(provincia, institucionEducacion.provincia) && Objects.equals(municipio, institucionEducacion.municipio) && Objects.equals(direccion, institucionEducacion.direccion) && Objects.equals(correo, institucionEducacion.correo) && Objects.equals(dependencia, institucionEducacion.dependencia) && Objects.equals(documentoLegal, institucionEducacion.documentoLegal) && telefono == institucionEducacion.telefono && apertura == institucionEducacion.apertura;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(nombre, departamento, provincia, municipio, direccion, correo, dependencia, telefono, apertura);
-    }
 
     @Override
     public String toString() {
@@ -165,10 +175,12 @@ public class InstitucionEducacion {
             ", direccion='" + getDireccion() + "'" +
             ", correo='" + getCorreo() + "'" +
             ", dependencia='" + getDependencia() + "'" +
+            ", documentoLegal='" + getDocumentoLegal() + "'" +
             ", telefono='" + getTelefono() + "'" +
             ", apertura='" + getApertura() + "'" +
             "}";
     }
+
     
 
 }

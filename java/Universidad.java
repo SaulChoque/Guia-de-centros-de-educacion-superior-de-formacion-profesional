@@ -1,5 +1,6 @@
 package java;
 
-public class Universidad {
+public class Universidad extends InstitucionEducacion{
+    private String 
     
 }
