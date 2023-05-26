@@ -9,8 +9,8 @@ public class CarreraMencion extends Carrera{
         super();
     }
 
-    public CarreraMencion(String nombre, int planEstudios, PilaMencion a) {
-        super(nombre, planEstudios);
+    public CarreraMencion(String nombre, int planEstudios, int idCarrera, PilaMencion a) {
+        super(nombre, planEstudios, idCarrera);
         this.a = a;
     }
 

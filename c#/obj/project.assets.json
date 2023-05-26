@@ -1,0 +1,66 @@
+{
+  "version": 3,
+  "targets": {
+    "net7.0": {}
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {
+    "net7.0": []
+  },
+  "packageFolders": {
+    "C:\\Users\\saulc\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\saulc\\OneDrive - fcpn.edu.bo\\I-2023\\LAB 131\\Proyecto\\source code\\Guia-de-centros-de-educacion-superior-de-formacion-profesional\\c#\\c#.csproj",
+      "projectName": "c#",
+      "projectPath": "C:\\Users\\saulc\\OneDrive - fcpn.edu.bo\\I-2023\\LAB 131\\Proyecto\\source code\\Guia-de-centros-de-educacion-superior-de-formacion-profesional\\c#\\c#.csproj",
+      "packagesPath": "C:\\Users\\saulc\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\saulc\\OneDrive - fcpn.edu.bo\\I-2023\\LAB 131\\Proyecto\\source code\\Guia-de-centros-de-educacion-superior-de-formacion-profesional\\c#\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\saulc\\AppData\\Roaming\\NuGet\\NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net7.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net7.0": {
+        "targetAlias": "net7.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
