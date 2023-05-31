@@ -1,13 +1,15 @@
-﻿// See https://aka.ms/new-console-template for more information
-using System;
-using System.Threading;
+package CodigoJava;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
 
-namespace c_;
-public class Program
-{
-    public static void Main(string[] args)
-    {
-        		//CARRERAS NORMALES (SIN MENCIONES)
+public class Principal {
+
+	public static void main(string[] args) throws FileNotFoundException, IOException, ClassNotFoundException
+	{
+		//CARRERAS NORMALES (SIN MENCIONES)
 		CCCarreras c1=new CCCarreras();
 		c1.adicionar(new Carrera("ElECTRICIDAD INDUSTRIAL", 0, 1)); 
 		c1.adicionar(new Carrera("ElECTRONICA", 0, 2)); 
@@ -28,25 +30,25 @@ public class Program
 		c5.adicionar(new Carrera("MECANICA", 0, 9)); 
 		c5.adicionar(new Carrera("SECRETARIO", 0, 10)); 
 
-		Stack<String> m1=new Stack<String>();
-		m1.Append("Desarrollo de software");
-		m1.Append("Ingenieria sistemas");
-		Stack<String> m2=new Stack<String>();
-		m2.Append("medico guardia");
-		m2.Append("enfermeria");
-		Stack<String> m3=new Stack<String>();
-		m3.Append("licenciatura mecanica");
-		m3.Append("mecanico");
-		Stack<String> m4=new Stack<String>();
-		m4.Append("a");
-		m4.Append("b");
-		Stack<String> m5=new Stack<String>();
-		m5.Append("c");
-		m5.Append("d");
-		m4.Append("e");
-		Stack<String> m6=new Stack<String>();
-		m6.Append("f");
-		m6.Append("g");
+		Stack<string> m1=new Stack<string>();
+		m1.add("Desarrollo de software");
+		m1.add("Ingenieria sistemas");
+		Stack<string> m2=new Stack<string>();
+		m2.add("medico guardia");
+		m2.add("enfermeria");
+		Stack<string> m3=new Stack<string>();
+		m3.add("licenciatura mecanica");
+		m3.add("mecanico");
+		Stack<string> m4=new Stack<string>();
+		m4.add("a");
+		m4.add("b");
+		Stack<string> m5=new Stack<string>();
+		m5.add("c");
+		m5.add("d");
+		m4.add("e");
+		Stack<string> m6=new Stack<string>();
+		m6.add("f");
+		m6.add("g");
 
 		//CARRERAS CON MENCIONES
 		CCCarreras cm1=new CCCarreras();
@@ -60,18 +62,18 @@ public class Program
 		cm3.adicionar(new CarreraMencion("CARR6", 1996, 66, m6));
 		
 		//Queues carreras ids
-		Queue<int> carr1=new Queue<int>();
-		carr1.Append(11);
-		Queue<int> carr2=new Queue<int>();
-		carr2.Append(22);
-		Queue<int> carr3=new Queue<int>();
-		carr3.Append(33);
-		Queue<int> carr4=new Queue<int>();
-		carr4.Append(44);
-		Queue<int> carr5=new Queue<int>();
-		carr5.Append(55);
-		Queue<int> carr6=new Queue<int>();
-		carr6.Append(66);
+		Queue<int> carr1=new LinkedList<int>();
+		carr1.add(11);
+		Queue<int> carr2=new LinkedList<int>();
+		carr2.add(22);
+		Queue<int> carr3=new LinkedList<int>();
+		carr3.add(33);
+		Queue<int> carr4=new LinkedList<int>();
+		carr4.add(44);
+		Queue<int> carr5=new LinkedList<int>();
+		carr5.add(55);
+		Queue<int> carr6=new LinkedList<int>();
+		carr6.add(66);
 		
 		//FACULTADES
 
@@ -92,10 +94,10 @@ public class Program
 		LDU.adicionar(new Universidad("UNIL", "La Paz", "Murillo", "La Paz", "A", "B", "PRIVADA", "C", 0, 0, f3, cm3));
 		//INSTITUTOS
 		LDobleInstituto LDI=new LDobleInstituto();
-		LDI.adicionar(new Instituto("ESCUELA INDUSTRIAL SUPERIOR PEDRO DOMINGO MURILLO", "La Paz", "Murillo", "La Paz", "", "", "FISCAL", "R.M. N° 498/2010", 0, 1942, c1));
+		LDI.adicionar(new Instituto("ESCUELA INDUSTRIAL baseIOR PEDRO DOMINGO MURILLO", "La Paz", "Murillo", "La Paz", "", "", "FISCAL", "R.M. N° 498/2010", 0, 1942, c1));
 		LDI.adicionar(new Instituto("INSTITUTO TECNOLOGICO PUERTO DE MEJILLONES", "La Paz", "Murillo", "El Alto", "", "", "FISCAL", "R.M. N° 814/09", 0, 1981, c2));
 		LDI.adicionar(new Instituto("INSTITUTO TECNOLOGICO DON BOSCO", "La Paz", "Murillo", "", "El Alto", "", "CONVENIO", "R.M. N° 029/11", 0, 1998, c3));
-		LDI.adicionar(new Instituto("INSTITUTO SUPERIOR TECNOLOGICO AGROINDUSTRIAL CANAVIRI (ISTAIC)", "La Paz", "Caranavi", "Caranavi", "", "", "FISCAL", "R.M. N° 204/10", 0, 1989, c4));
+		LDI.adicionar(new Instituto("INSTITUTO baseIOR TECNOLOGICO AGROINDUSTRIAL CANAVIRI (ISTAIC)", "La Paz", "Caranavi", "Caranavi", "", "", "FISCAL", "R.M. N° 204/10", 0, 1989, c4));
 		LDI.adicionar(new Instituto("INSITTUTO TECNICO COMERCIAL LA PAZ", "La Paz", "Murillo", "La Paz", "", "", "FISCAL", "R.M. N° 066/2012", 0, 1977, c5));
 		
 
@@ -105,9 +107,8 @@ public class Program
 		try {
 			do		
 			{
-            Console.WriteLine();
 				Console.WriteLine("\n ");
-				Console.WriteLine(" CENTROS DE EDUCACION SUPERIOR ");
+				Console.WriteLine(" CENTROS DE EDUCACION baseIOR ");
 				Console.WriteLine(" ==== ");
 				Console.WriteLine(" ");
 				Console.WriteLine("1. LEER");
@@ -161,9 +162,6 @@ public class Program
 					}
 			}while(op<5);
 		}catch (Exception e) {Console.WriteLine("error"+e);}
-        
-    }
+	}				
 }
-  
-
-
+	
