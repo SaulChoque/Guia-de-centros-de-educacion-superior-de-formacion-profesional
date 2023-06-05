@@ -2,7 +2,10 @@
 using System;
 using System.Threading;
 
+
+using System.IO;
 namespace c_;
+[Serializable]
 public class Program
 {
     public static void Main(string[] args)

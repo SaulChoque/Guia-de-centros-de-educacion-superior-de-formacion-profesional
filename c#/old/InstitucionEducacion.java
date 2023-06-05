@@ -24,7 +24,7 @@ public class InstitucionEducacion {
         this.apertura = apertura;
     }
 
-    public void leer(){
+    public new void leer(){
         this.departamento="La Paz";
         Console.Write("\t>> Inserte nombre => ");
         this.nombre=Leer.Cadena;
@@ -95,7 +95,7 @@ public class InstitucionEducacion {
     }
 
     //@Override
-    public string tostring() {
+    public override string ToString() {
         return "{" +
             " nombre='" + getNombre() + "'" +
             ", departamento='" + getDepartamento() + "'" +

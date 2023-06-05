@@ -3,15 +3,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+using System.IO;
 namespace c_;
+[Serializable]
 
 public class InstitucionEducacion
 {
     protected string nombre,departamento,provincia,municipio,direccion,correo,dependencia,documentoLegal;
     protected int telefono,apertura;
+    private List<string> fotosDir;
 
     public InstitucionEducacion() {
-
+        this.nombre = "";
+        this.departamento = "";
+        this.provincia = "";
+        this.municipio = "";
+        this.direccion = "";
+        this.correo = "";
+        this.dependencia = "";
+        this.documentoLegal = "";
+        this.telefono = 0;
+        this.apertura = 0;
+        this.fotosDir =new List<string>();
     }
 
     public InstitucionEducacion(string nombre, string departamento, string provincia, string municipio, string direccion, string correo, string dependencia, string documentoLegal, int telefono, int apertura) {
@@ -25,6 +38,7 @@ public class InstitucionEducacion
         this.documentoLegal = documentoLegal;
         this.telefono = telefono;
         this.apertura = apertura;
+        this.fotosDir =new List<string>();
     }
 
     public void leer(){
@@ -74,7 +88,7 @@ public class InstitucionEducacion
 
 
     //@Override
-    public string tostring() {
+    public override string ToString() {
         return "{" +
             " nombre='" + getNombre() + "'" +
             ", departamento='" + getDepartamento() + "'" +

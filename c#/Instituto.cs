@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+
+using System.IO;
 namespace c_;
+[Serializable]
 
 public class Instituto: InstitucionEducacion
 {
     private CCCarreras carreras;
+    
 
 
     public Instituto(): base(){
@@ -21,7 +25,7 @@ public class Instituto: InstitucionEducacion
     public CCCarreras getCarreras() {return this.carreras;}
     public void setCarreras(CCCarreras carreras) {this.carreras = carreras;}
 
-    public void leer(){
+    public new void leer(){
         Console.WriteLine("\n- Lectura Instituto: ");
         base.leer();
         //carreras sin menciones
@@ -29,7 +33,7 @@ public class Instituto: InstitucionEducacion
     } 
 
     public void mostrar(){
-        Console.WriteLine(base.tostring()+" "+this.tostring());
+        Console.WriteLine(base.ToString()+" "+this.ToString());
         carreras.mostrar();
     } 
 

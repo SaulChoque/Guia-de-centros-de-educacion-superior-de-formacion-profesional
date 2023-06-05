@@ -28,7 +28,7 @@ public class LDobleInstituto {
             nue.setAnt(r);
         }
     }
-    public void leer(){
+    public new void leer(){
 		char condition=' ';
 		do {
 			Instituto ux=new Instituto();

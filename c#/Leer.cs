@@ -10,7 +10,10 @@
 
 using System;
 
+
+using System.IO;
 namespace c_;
+[Serializable]
 
 /// <summary>
 /// Clase que lee de la consola y transforma en el dato que se necesita

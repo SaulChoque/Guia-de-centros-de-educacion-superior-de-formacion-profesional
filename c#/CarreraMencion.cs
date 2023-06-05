@@ -3,12 +3,14 @@ using System.Collections;
 using System.Linq;
 using System.Threading.Tasks;
 
+
+using System.IO;
 namespace c_;
+[Serializable]
 
 public class CarreraMencion: Carrera
 {
     private Stack<string> menciones;
-
 
     public CarreraMencion() {
         menciones=new Stack<string>();
@@ -25,7 +27,7 @@ public class CarreraMencion: Carrera
         setA(a);
         return this;
     }
-    public void leer(){
+    public new void leer(){
         base.leer();
         Console.WriteLine("- Lectura Menciones");
 		do {

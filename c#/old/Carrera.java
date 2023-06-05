@@ -18,7 +18,7 @@ public class Carrera {
     }
 
 
-    public void leer(){
+    public new void leer(){
         Console.WriteLine("\n- Lectura Carrera: ");
         Console.Write("\t>> Inserte nombre => ");
         this.nombre=Leer.Cadena;
@@ -52,7 +52,7 @@ public class Carrera {
     }
 
     //@Override
-    public string tostring() {
+    public override string ToString() {
         return "{" +
             " nombre='" + getNombre() + "'" +
             ", planEstudios='" + getPlanEstudios() + "'" +

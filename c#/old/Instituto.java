@@ -18,7 +18,7 @@ public class Instituto extends InstitucionEducacion{
     public CCCarreras getCarreras() {return this.carreras;}
     public void setCarreras(CCCarreras carreras) {this.carreras = carreras;}
 
-    public void leer(){
+    public new void leer(){
         Console.WriteLine("\n- Lectura Instituto: ");
         base.leer();
         //carreras sin menciones
@@ -26,7 +26,7 @@ public class Instituto extends InstitucionEducacion{
     } 
 
     public void mostrar(){
-        Console.WriteLine(base.tostring()+" "+this.tostring());
+        Console.WriteLine(base.ToString()+" "+this.ToString());
         carreras.mostrar();
     } 
 

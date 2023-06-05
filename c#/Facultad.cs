@@ -2,8 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace c_;
+[Serializable]
 
 public class Facultad
 {
@@ -12,6 +14,7 @@ public class Facultad
 
 
     public Facultad() {
+        this.nombre = "";
         carreras=new Queue<int>();
     }
     
@@ -59,7 +62,7 @@ public class Facultad
     }
     /*
      
-    public void leer(){
+    public new void leer(){
         Console.WriteLine("\n- Lectura Carrera: ");
         Console.Write("\t>> Inserte nombre => ");
         this.nombre=Leer.Cadena;
@@ -91,7 +94,7 @@ public class Facultad
     
     
     //@Override
-    public string tostring() {
+    public override string ToString() {
         return "{" +
         " nombre='" + getNombre() + "'" +
         "}";

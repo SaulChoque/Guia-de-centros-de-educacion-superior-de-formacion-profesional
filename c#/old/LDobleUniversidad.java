@@ -40,7 +40,7 @@ public class LDobleUniversidad {
             o=o.getSig();
         }
     }
-    public void leer(){
+    public new void leer(){
 		char condition=' ';
 		do {
 			Universidad ux=new Universidad();

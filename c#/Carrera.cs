@@ -2,8 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace c_;
+[Serializable]
 
 public class Carrera
 {
@@ -14,6 +16,9 @@ public class Carrera
 
 
     public Carrera() {
+        this.nombre = "";
+        this.planEstudios = 0;
+        this.idCarrera = 0;
     }
 
     public Carrera(string nombre, int planEstudios, int idCarrera) {
@@ -33,6 +38,8 @@ public class Carrera
         Console.Write("\t>> Inserte idCarrera => ");
         this.idCarrera=Leer.Integer;
     } 
+
+    
 
     public string getNombre() {return this.nombre;}
     public void setNombre(string nombre) {this.nombre = nombre;}
@@ -60,13 +67,15 @@ public class Carrera
     */
 
     //@Override
-    public string tostring() {
+    public override string ToString() {
         return "{" +
             " nombre='" + getNombre() + "'" +
             ", planEstudios='" + getPlanEstudios() + "'" +
             ", idCarrera='" + getIdCarrera() + "'" +
             "}";
     }
+
+
 
         
 }

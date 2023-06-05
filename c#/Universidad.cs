@@ -2,8 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace c_;
+[Serializable]
+
 
 public class Universidad: InstitucionEducacion
 {
@@ -45,7 +48,7 @@ public class Universidad: InstitucionEducacion
 
 
     public void mostrar() {
-        Console.WriteLine(base.tostring());
+        Console.WriteLine(base.ToString());
         if(facultades.getP()!=null){
             Console.WriteLine("- Facultades: ");
             facultades.mostrar(carreras);
@@ -57,7 +60,7 @@ public class Universidad: InstitucionEducacion
     }
 
 
-    public void leer(){
+    public new void leer(){
         Console.WriteLine("- Lectura universidad: ");
         base.leer();
         //carreras con menciones

@@ -23,7 +23,7 @@ public class CarreraMencion extends Carrera{
         setA(a);
         return this;
     }
-    public void leer(){
+    public new void leer(){
         base.leer();
         Console.WriteLine("- Lectura Menciones");
         char condition=' ';

@@ -2,8 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace c_;
+[Serializable]
 
 public class CCCarreras
 {
@@ -72,7 +74,7 @@ public class CCCarreras
 		}
     }
 
-	public void leer(){
+	public new void leer(){
 		do {
 			Carrera cx=new Carrera();
 			cx.leer();

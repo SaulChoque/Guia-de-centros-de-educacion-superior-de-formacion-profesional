@@ -63,7 +63,7 @@ public class CCCarreras {
 		}
     }
 
-	public void leer(){
+	public new void leer(){
 		char condition=' ';
 		do {
 			Carrera cx=new Carrera();
