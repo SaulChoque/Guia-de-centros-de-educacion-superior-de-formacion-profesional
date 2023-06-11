@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RZZupRsDkaakLJjF7aHkNZysfvCug9uHJgqm2u1ByeXNfb/SJdoG4OVRSkaswww02sPv/vg+7ssV5orRGjwW2g==",
+  "dgSpecHash": "zkytjx4ZsFBog6ZCie3/rjjTRsLCVbbQ/K5DbzJOfcgc+WDhm4MWYhSsXa5IMTQfJxv63Wu0ts6hHD4mMKeo5w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\saulc\\OneDrive\\Escritorio\\flash\\vscode\\repos\\Guia_Centros_Estudio_Superior.Core\\Guia_Centros_Estudio_Superior.Core.csproj",
+  "projectFilePath": "C:\\Users\\saulc\\OneDrive\\Documentos\\vscode\\Guia-de-centros-de-educacion-superior-de-formacion-profesional\\c#\\Interfaz Grafica\\Guia_Centros_Estudio_Superior.Core\\Guia_Centros_Estudio_Superior.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\saulc\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
   ],
